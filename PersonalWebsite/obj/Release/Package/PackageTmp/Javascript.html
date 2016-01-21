@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Excercises</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <h1>JavaScript Exercises</h1>
+                <br />
+                <h4>Enter integers below to analyze a data set of five numbers.</h4>
+                <!--input tag allows one to have boxes that take user input. The type attribute here is number so that only
+                number values can be inputted into the input field. Text cannot be inputted here.-->
+                first number<br />
+                <input type="number" class="userNum" id="number1" /><br />
+                second number<br />
+                <input type="number" class="userNum" id="number2" /><br />
+                third number<br />
+                <input type="number" class="userNum" id="number3" /><br />
+                fourth number<br />
+                <input type="number" class="userNum" id="number4" /><br />
+                fifth number<br />
+                <input type="number" class="userNum" id="number5" /><br /><br />
+                <!--here onclick is utilized so that when the button is clicked the JavaScript function numAlert is run.-->
+                <input id="mySubmit" type="button" value="Analyze Data Set!" onclick="numAlert(); ">
+                <p id="answer"></p>
+                <p id="answer1"></p>
+                <p id="answer2"></p>
+                <p id="answer3"></p>
+                <p id="answer4"></p>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Enter a positive integer below to find out its factorial.</h4>
+                <br />
+                <input type="number" id="factorial" />
+                <input id="mySubmit2" type="button" value="Analyze Number!" onclick="numAlert2(); ">
+            </div>
+            <div class="col-md-6">
+                <p id="factorialAnswer"></p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>
+                    Enter two integers between 1 and 100. The numbers from 1 to 100 will be printed, but with a catch.
+                    Multiples of fizz will print "fizz" and multiples of buzz will print "buzz". Multiples of both fizz and buzz will print "fizzbuzz."
+                </h4>
+                <br />
+                fizz<br />
+                <input type="number" id="fizz" />
+                <br />
+                buzz<br />
+                <input type="number" id="buzz" />
+                <input id="mySubmit3" type="button" value="Analyze Numbers!" onclick="numAlert3(); ">
+            </div>
+            <div class="col-md-6">
+                <p id="multiple"></p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Enter a word below to see if it is a palindrome.</h4>
+                <input type="text" id="palindromeInput" />
+                <input id="mySubmit4" type="button" value="Analyze Word!" onclick="wordAlert(); " />
+            </div>
+            <div class="col-md-6">
+                <p id="palindrome"></p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <script src="js/freelancer2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
