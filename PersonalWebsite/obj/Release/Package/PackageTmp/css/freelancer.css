@@ -192,6 +192,25 @@ section.success {
     background: #7BAFD4;
 }
 
+.carousel{
+    background: #7BAFD4;
+    margin-top: 0em;
+}
+/*.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}*/
+
+.bs-example{
+	margin: 1em;
+}
+
+.aboutRow {
+    padding-top:2em;
+    padding-bottom:8em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 section.success a,
 section.success a:hover,
 section.success a:focus,

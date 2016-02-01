@@ -1,4 +1,5 @@
 ﻿
+
 //This is the function that runs when the submit button is clicked.
 function numAlert() {
     //The numbers the user submits are then transferred into JavaScript variables.
@@ -51,6 +52,26 @@ function numAlert2() {
 };
 
 
+//This is another way of finding a factorial utilizing a recursive function
+function numAlert22() {
+    //utilizing a + in front of a string converts it into a number.
+    var n = +document.getElementById('factorial').value;
+    function factorial(int) {
+        if (int < 2 && int >= 0) {
+            return 1;
+        }
+        else if (int < 0) {
+            return "Please enter a positive number.";
+        }
+        else {
+            return int * factorial(int - 1);
+        }
+    }
+
+    console.log(factorial(n));
+}
+
+
 
 function numAlert3() {
     var jimmy = parseInt(document.getElementById('fizz').value, 10);
@@ -98,3 +119,149 @@ function wordAlert() {
         document.getElementById('palindrome').textContent = "The word/ phrase " + jimmy + " is not a palindrome.";
     };
 };
+
+//Find the factors of a number and display them in an array
+function factorFinder(number) {
+    var factors = [];
+    for (var i = 1; i < number; i++) {
+        var remainder = number % i;
+        if (remainder === 0) {
+            factors.push(i);
+        }
+    }
+    console.log(factors);
+}
+
+
+//Recursive Function adding numbers in an array together and displaying the sum.
+var arraySum = function () {
+    var numbers = [1, 2, 3, 4, 5];
+    numIndex = numbers.length - 1;
+    var answer = 0;
+    function multiple(index) {
+        if (index < 0) {
+            return;
+        }
+        answer = answer + numbers[index];
+        return multiple(index - 1);
+    };
+    multiple(numIndex);
+    console.log(answer);
+}
+
+//Finds perfect numbers between 1 and 10,000.
+var perfNumbers = function () {
+    for (i = 1; i <= 10000; i++) {
+
+        var factors = [];
+        if (i === 1) {
+            factors.push(1);
+        };
+        for (var j = 1; j < i; j++) {
+            var remainder = i % j;
+            if (remainder === 0) {
+                factors.push(j);
+            };
+        }
+        numIndex = factors.length - 1;
+        var answer = 0;
+        function multiple(index) {
+            if (index < 0) {
+                return;
+            }
+            answer = answer + factors[index];
+            return multiple(index - 1);
+        };
+        multiple(numIndex);
+        //console.log(answer);
+        if (i === 1) {
+        }
+        else if (answer === i) {
+            document.getElementById('displayPerfNums').textContent += "\n" + "The number " + i + " is a perfect number!" +"\n";
+        }
+    }
+}
+
+//Takes a number entered by the user and determines if it is a perfect number.
+var perfNumberFinder = function () {
+    var userInput = +document.getElementById('perfNumInput1').value;
+    var factors = [];
+    if (userInput === 1) {
+        factors.push(1);
+    }
+    else if (userInput <= 0 || userInput > 10000 ) {
+        document.getElementById('perfNumsAns').textContent = "Please enter a valid number greater than 0 and less than 10,000.";
+    }
+    else {
+        for (var j = 1; j < userInput; j++) {
+            var remainder = userInput % j;
+            if (remainder === 0) {
+                factors.push(j);
+            };
+        }
+        numIndex = factors.length - 1;
+        var answer = 0;
+        function multiple(index) {
+            if (index < 0) {
+                return;
+            }
+            answer = answer + factors[index];
+            return multiple(index - 1);
+        };
+        multiple(numIndex);
+        //console.log(answer);
+        if (userInput === 1) {
+        }
+        else if (answer === userInput) {
+            document.getElementById('perfNumsAns').textContent = "The number " + userInput + " is a perfect number!";
+        }
+        else if (answer !== userInput) {
+            document.getElementById('perfNumsAns').textContent = "The number " + userInput + " is not a perfect number :(";
+        }
+    }
+
+}
+//Finds happy numbers between 1 and 100.
+var happyNums = function () {
+    for (var l = 1; l <= 50; l++) {
+        var num = l;
+        var numCheck = l;
+        num = num.toString();
+        var newNum = 0;
+        // The loop takes each of the numbers in the individual string for example console.log(num.substring(0, 1)) = 2 and
+        //console.log(num.substring(1, 2))= 3.
+        for (var k = 0; k < 5; k++) {
+            for (var i = 0, j = 1; i < num.length, j <= num.length; i++, j++) {
+                newNum += Math.pow(+num.substring(i, j), 2);
+            }
+            num = newNum.toString();
+            newNum = 0;
+        }
+        if (num === "1") {
+            console.log("The number " + numCheck + " is a happy number!");
+        }
+    }
+}
+
+
+happyNums();
+
+//Armstrong numbers between 100 and 999.
+var armstrongNums = function () {
+    for (var l = 100; l <= 999; l++) {
+        var num = l;
+        var numCheck = l;
+        num = num.toString();
+        var newNum = 0;
+        for (var i = 0, j = 1; i < 3, j <= 3; i++, j++) {
+            newNum += Math.pow(+num.substring(i, j), 3);
+        }
+        if (newNum === numCheck) {
+            console.log("The number " + numCheck + " is an armstrong number.");
+        }
+    }
+
+}
+
+armstrongNums();
+
