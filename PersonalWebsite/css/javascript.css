@@ -1,3 +1,49 @@
 ﻿#displayPerfNums{
     white-space: pre-line;
 }
+
+#calcName {
+    color:white;
+    font-family: 'Faster One', cursive;
+}
+
+#calcDisplay {
+    border: 0.2em solid black;
+    height: 3em;
+    border-radius: 0.3em;
+    background: white;
+    z-index: 1000;
+}
+
+#calcScreen{
+    padding-top: 0.6em;
+    color:black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.numBtns {
+    width: 95%;
+    padding: 1em;
+    font-weight:900;
+    font-size: 1.1em;
+    margin: 0.3em;
+    border-radius: 0.3em;
+}
+
+.numFunctions {
+    background: red;
+    color:white;
+}
+
+
+.btnSpacing {
+    padding: 0;
+    margin: 0;
+}
+
+#calculatorBorder{
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 0.75em;
+    background: blue;
+}

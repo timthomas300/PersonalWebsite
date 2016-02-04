@@ -253,7 +253,7 @@ var armstrongNums = function () {
         var numCheck = l;
         num = num.toString();
         var newNum = 0;
-        for (var i = 0, j = 1; i < 3, j <= 3; i++, j++) {
+        for (var i = 0, j = 1; i < num.length, j <= num.length; i++, j++) {
             newNum += Math.pow(+num.substring(i, j), 3);
         }
         if (newNum === numCheck) {
@@ -265,3 +265,56 @@ var armstrongNums = function () {
 
 armstrongNums();
 
+var push0 = function () {
+    document.getElementById('calcScreen').textContent += "0";
+};
+var push1 = function () {
+    document.getElementById('calcScreen').textContent += "1";
+};
+var push2 = function () {
+    document.getElementById('calcScreen').textContent += "2";
+};
+var push3 = function () {
+    document.getElementById('calcScreen').textContent += "3";
+};
+var push4 = function () {
+    document.getElementById('calcScreen').textContent += "4";
+};
+var push5 = function () {
+    document.getElementById('calcScreen').textContent += "5";
+};
+var push6 = function () {
+    document.getElementById('calcScreen').textContent += "6";
+};
+var push7 = function () {
+    document.getElementById('calcScreen').textContent += "7";
+};
+var push8 = function () {
+    document.getElementById('calcScreen').textContent += "8";
+};
+var push9 = function () {
+    document.getElementById('calcScreen').textContent += "9";
+};
+var pushPlus = function () {
+    document.getElementById('calcScreen').textContent += "+";
+};
+var pushMinus = function () {
+    document.getElementById('calcScreen').textContent += "-";
+};
+var pushDivide = function () {
+    document.getElementById('calcScreen').textContent += "/";
+};
+var pushMultiply = function () {
+    document.getElementById('calcScreen').textContent += "*";
+};
+var pushDecimal = function () {
+    document.getElementById('calcScreen').textContent += ".";
+};
+var pushEquals = function () {
+    var getEquation = document.getElementById('calcScreen').textContent;
+    var answer = eval(getEquation);
+    document.getElementById('calcScreen').textContent = answer;
+};
+var pushClear = function () {
+    document.getElementById('calcScreen').textContent = "";
+}
