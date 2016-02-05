@@ -4,6 +4,12 @@
     <title>JavaScript Excercises</title>
 	<meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/javascript.css" type="text/css" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
     <div class="container">
@@ -50,7 +56,7 @@
                 <h4>Enter a positive integer below to find out its factorial.</h4>
                 <br />
                 <input type="number" id="factorial" />
-                <input id="mySubmit2" type="button" value="Analyze Number!" onclick="numAlert2(); ">
+                <input id="mySubmit2" type="button" value="Analyze Number!" onclick="numAlert2(); numAlert22();">
             </div>
             <div class="col-md-6">
                 <p id="factorialAnswer"></p>
@@ -100,7 +106,114 @@
                 <p id="palindrome"></p>
             </div>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Finds the perfect numbers between 1 and 10,000.</h4>
+                <input type="button" id="perfNumBtn1" onclick="perfNumbers();" value="Find perfect #s!" />
+                <p id="displayPerfNums"></p>
+            </div>
+            <div class="col-md-6">
+                <h4>Enter a number below to find out if it is a perfect number.</h4>
+                <input type="number" id="perfNumInput1" />
+                <input type="button" id="perfNumBtn2" onclick="perfNumberFinder();" value="Is it a perfect number?" />
+                <br />
+                <p id="perfNumsAns"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div id="calculatorBorder" class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+                    <center><h3 id="calcName">TT-3000</h3></center>
+                    <div class="row">
+                        <div class="col-xs-12" id="calcDisplay">
+                            <p id="calcScreen"></p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="btnSpacing col-xs-6">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushClear();" value="Clear" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushMinus();" value="+/-" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushDivide();" value="/" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push7();" value="7" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push8();" value="8" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push9();" value="9" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushMultiply();" value="*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push4();" value="4" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push5();" value="5" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push6();" value="6" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushMinus();" value="-" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push1();" value="1" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push2();" value="2" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns" id="" onclick="push3();" value="3" />
+                        </div>
+                        <div class="btnSpacing col-xs-3">
+                            <input type="button" class="numBtns numFunctions" id="" onclick="pushPlus();" value="+" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btnSpacing col-xs-4">
+                            <input type="button" class="numBtns" id="" onclick="push0();" value="0" />
+                        </div>
+                        <div class="btnSpacing col-xs-4">
+                            <input type="button"class="numBtns" id="" onclick="pushDecimal();" value="." />
+                        </div>
+                        <div class="btnSpacing col-xs-4">
+                            <input type="button" class="numBtns numFunctions" id="numsTotal" onclick="pushEquals();" value="=" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
     <br />

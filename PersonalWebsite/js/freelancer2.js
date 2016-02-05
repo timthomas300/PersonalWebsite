@@ -257,13 +257,11 @@ var armstrongNums = function () {
             newNum += Math.pow(+num.substring(i, j), 3);
         }
         if (newNum === numCheck) {
-            console.log("The number " + numCheck + " is an armstrong number.");
+            document.getElementById('displayArmstrongNums').textContent +="\n" +"The number " + numCheck + " is an armstrong number!" + "\n";
         }
     }
 
 }
-
-armstrongNums();
 
 var push0 = function () {
     document.getElementById('calcScreen').textContent += "0";
