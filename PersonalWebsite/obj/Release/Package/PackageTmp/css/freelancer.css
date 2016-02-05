@@ -47,6 +47,7 @@ body {
     font-size: 1.1em;
     margin: 0.3em;
     border-radius: 0.3em;
+    background: #DDDDDD;
 }
 
 .numFunctions {
@@ -250,9 +251,17 @@ section.success {
     background: #7BAFD4;
     margin-top: 0em;
 }
-/*.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-}*/
+
+.carousel .item {
+  height: 20em;
+}
+
+@media(max-width: 768px) {
+    .carousel .item {
+  height: 30em;
+}
+}
+
 
 .bs-example{
 	margin: 1em;
