@@ -1,33 +1,41 @@
-﻿
-
-//This is the function that runs when the submit button is clicked.
+﻿//This is the function that runs when the submit button is clicked.
 function numAlert() {
-    //The numbers the user submits are then transferred into JavaScript variables.
-    //It should be noted that the values returned from the user's submission are string and not numeric values.
+
     var num1 = document.getElementById('number1').value;
     var num2 = document.getElementById('number2').value;
     var num3 = document.getElementById('number3').value;
     var num4 = document.getElementById('number4').value;
     var num5 = document.getElementById('number5').value;
-    //Utilizing a Math object, the greatest and least number from the set is determined. The math object converts the
-    //string values into numeric ones.
-    var jimmy = Math.max(num1, num2, num3, num4, num5);
-    document.getElementById('answer').textContent = "The greatest number is " + jimmy + ".";
-    jimmy = Math.min(num1, num2, num3, num4, num5);
-    document.getElementById('answer1').textContent = "The least number is " + jimmy + ".";
-    //the parseInt function allows the string values to be converted into numeric ones.
-    num1 = parseInt(num1, 10);
-    num2 = parseInt(num2, 10);
-    num3 = parseInt(num3, 10);
-    num4 = parseInt(num4, 10);
-    num5 = parseInt(num5, 10);
-    //The numeric values are then utilized to find product, mean, and sum of the data set.
-    var total = num1 + num2 + num3 + num4 + num5;
-    document.getElementById('answer2').textContent = "The sum of all the numbers is " + total + ".";
-    var mean = total / 5;
-    document.getElementById('answer3').textContent = "The mean of the numbers is " + mean + ".";
-    var product = num1 * num2 * num3 * num4 * num5;
-    document.getElementById('answer4').textContent = "The product of all the numbers is " + product + ".";
+    if (num1 === "" || num2 === "" || num3 === "" || num4 === "" || num5 === "") {
+        document.getElementById('answer').textContent = "Please enter a valid number into each number field.";
+    }
+    else {
+        //the parseInt function allows the string values to be converted into numeric ones.
+        num1 = parseInt(num1, 10);
+        num2 = parseInt(num2, 10);
+        num3 = parseInt(num3, 10);
+        num4 = parseInt(num4, 10);
+        num5 = parseInt(num5, 10);
+        if (isNaN(num1) === true || isNaN(num2) === true || isNaN(num3) === true || isNaN(num4) === true || isNaN(num5) === true) {
+            document.getElementById('answer').textContent = "Please enter a valid number into each number field.";
+        }
+        else {
+            //Utilizing a Math object, the greatest and least number from the set is determined. The math object converts the
+            //string values into numeric ones.
+            var jimmy = Math.max(num1, num2, num3, num4, num5);
+            document.getElementById('answer').textContent = "The greatest number is " + jimmy + ".";
+            jimmy = Math.min(num1, num2, num3, num4, num5);
+            document.getElementById('answer1').textContent = "The least number is " + jimmy + ".";
+
+            //The numeric values are then utilized to find product, mean, and sum of the data set.
+            var total = num1 + num2 + num3 + num4 + num5;
+            document.getElementById('answer2').textContent = "The sum of all the numbers is " + total + ".";
+            var mean = total / 5;
+            document.getElementById('answer3').textContent = "The mean of the numbers is " + mean + ".";
+            var product = num1 * num2 * num3 * num4 * num5;
+            document.getElementById('answer4').textContent = "The product of all the numbers is " + product + ".";
+        }
+    }
 };
 
 
@@ -83,6 +91,9 @@ function numAlert3() {
     else if (jimmy < 2 || bobby < 2) {
         document.getElementById('multiple').textContent = "Check both values. Please enter a value greater than 1 but less than 100.";
     }
+    else if (isNaN(jimmy) === true || isNaN(bobby) === true) {
+        document.getElementById('multiple').textContent = "Please enter two numbers in the number fields.";
+    }
     else {
         for (var i = 1; i <= 100; i++) {
             if (i % bobby === 0 && i % jimmy === 0) {
@@ -107,6 +118,7 @@ function numAlert3() {
 function wordAlert() {
     var jimmy = document.getElementById('palindromeInput').value;
     var bobby = jimmy.toUpperCase();
+    bobby = bobby.replace(/\s/g, '');
     var timmy = "";
     for (var i = bobby.length - 1; i >= 0; i--) {
         timmy += bobby[i];
@@ -192,6 +204,9 @@ var perfNumberFinder = function () {
     else if (userInput <= 0 || userInput > 10000 ) {
         document.getElementById('perfNumsAns').textContent = "Please enter a valid number greater than 0 and less than 10,000.";
     }
+    else if (isNaN(userInput) === true) {
+        document.getElementById('perfNumsAns').textContent = "Please enter a valid number greater than 0 and less than 10,000.";
+    }
     else {
         for (var j = 1; j < userInput; j++) {
             var remainder = userInput % j;
@@ -216,7 +231,7 @@ var perfNumberFinder = function () {
             document.getElementById('perfNumsAns').textContent = "The number " + userInput + " is a perfect number!";
         }
         else if (answer !== userInput) {
-            document.getElementById('perfNumsAns').textContent = "The number " + userInput + " is not a perfect number :(";
+            document.getElementById('perfNumsAns').textContent = "The number " + userInput + " is not a perfect number.";
         }
     }
 
@@ -310,8 +325,14 @@ var pushDecimal = function () {
 };
 var pushEquals = function () {
     var getEquation = document.getElementById('calcScreen').textContent;
-    var answer = eval(getEquation);
-    document.getElementById('calcScreen').textContent = answer;
+    try {
+        eval(getEquation);
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            document.getElementById('calcScreen').textContent = "Error";
+        }
+    }
+    document.getElementById('calcScreen').textContent = eval(getEquation);
 };
 var pushClear = function () {
     document.getElementById('calcScreen').textContent = "";

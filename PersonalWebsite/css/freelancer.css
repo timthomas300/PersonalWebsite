@@ -258,8 +258,8 @@ section.success {
 
 @media(max-width: 768px) {
     .carousel .item {
-  height: 30em;
-}
+        height: 30em;
+        }
 }
 
 
