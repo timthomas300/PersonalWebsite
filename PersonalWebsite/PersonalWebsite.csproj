@@ -257,6 +257,7 @@
     <Content Include="js\contact_me.js" />
     <Content Include="js\freelancer.js" />
     <Content Include="js\freelancer2.js" />
+    <Content Include="js\freelancer3.js" />
     <Content Include="js\jqBootstrapValidation.js" />
     <Content Include="js\jquery.js" />
     <Content Include="less\freelancer.less" />
