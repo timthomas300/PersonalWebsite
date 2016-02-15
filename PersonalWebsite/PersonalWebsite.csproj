@@ -239,6 +239,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\monitor164.png" />
+    <Content Include="img\portfolio\!.png" />
     <Content Include="img\portfolio\1.png" />
     <Content Include="img\portfolio\2.png" />
     <Content Include="img\portfolio\3.png" />
@@ -246,6 +247,7 @@
     <Content Include="img\portfolio\5.png" />
     <Content Include="img\portfolio\6.png" />
     <Content Include="img\portfolio\7.png" />
+    <Content Include="img\portfolio\Pen.png" />
     <Content Include="img\Tim.png" />
     <Content Include="index.html" />
     <Content Include="Javascript.html" />

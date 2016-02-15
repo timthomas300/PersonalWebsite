@@ -47,3 +47,50 @@
     border-radius: 0.75em;
     background: blue;
 }
+
+.portfolioTabs {
+    text-align: center;
+    border: 3px solid #2C3E50;
+    border-radius: 2px;
+    width: 75%;
+    box-shadow: 4px 4px 5px 0px #717382;
+    color: ‎#2C3E50;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.5em;
+    background-color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.55);
+}
+
+@media(max-width:768px) {
+    .portfolioTabs {
+        width: 100%;
+    }
+}
+
+.tabActive {
+    border: 3px solid #33ffad;
+    color: #33ffad;
+    background-color: #2C3E50;
+    box-shadow: none;
+}
+
+.noDisplay{
+    display:none;
+}
+
+#csharpTabContent{
+    background-color: orange;
+    color: white;
+}
+
+#javascriptTabContent{
+    background-color: blueviolet;
+    color: white;
+  
+}
+
+#jqueryTabContent {
+    background-color: palevioletred;
+    color: white;
+}

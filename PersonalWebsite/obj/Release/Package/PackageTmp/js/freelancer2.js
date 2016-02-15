@@ -337,3 +337,4 @@ var pushEquals = function () {
 var pushClear = function () {
     document.getElementById('calcScreen').textContent = "";
 }
+
