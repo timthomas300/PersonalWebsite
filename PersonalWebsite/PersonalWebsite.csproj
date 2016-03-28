@@ -249,6 +249,7 @@
     <Content Include="img\portfolio\7.png" />
     <Content Include="img\portfolio\Pen.png" />
     <Content Include="img\Tim.png" />
+    <Content Include="img\tim1.png" />
     <Content Include="index.html" />
     <Content Include="Javascript.html" />
     <Content Include="js\bootstrap.js" />
