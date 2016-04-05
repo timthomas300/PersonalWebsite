@@ -17,7 +17,11 @@ function numAlert() {
         num4 = parseInt(num4, 10);
         num5 = parseInt(num5, 10);
         if (isNaN(num1) === true || isNaN(num2) === true || isNaN(num3) === true || isNaN(num4) === true || isNaN(num5) === true) {
-            document.getElementById('answer').textContent = "Please enter a valid number into each number field.";
+            document.getElementById('answer').textContent = "";
+            document.getElementById('answer1').textContent = "";
+            document.getElementById('answer2').textContent = "";
+            document.getElementById('answer3').textContent = "";
+            document.getElementById('answer4').textContent = "Please enter a valid number into each number field.";
         }
         else {
             //Utilizing a Math object, the greatest and least number from the set is determined. The math object converts the
@@ -257,9 +261,6 @@ var happyNums = function () {
         }
     }
 }
-
-
-happyNums();
 
 //Armstrong numbers between 100 and 999.
 var armstrongNums = function () {

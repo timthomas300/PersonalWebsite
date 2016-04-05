@@ -12,6 +12,11 @@ body {
     font-size: 8px;
 }
 
+#myFace{
+    width: 300px;
+    height: 300px;
+}
+
 #displayPerfNums{
     white-space: pre-line;
 }
@@ -354,7 +359,6 @@ section.success a.active {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -586,10 +590,10 @@ footer .footer-below {
     display:none;
 }
 
-#csharpTabContent {
+/*#csharpTabContent {
     background-color: red;
     color: white;
-}
+}*/
 
 /*--------------------List Styling-----------------------*/
 #listHeading {

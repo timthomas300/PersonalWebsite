@@ -80,3 +80,8 @@ C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebs
 C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Release\PersonalWebsite.csprojResolveAssemblyReference.cache
 C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Release\PersonalWebsite.dll
 C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Release\PersonalWebsite.pdb
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\SendGrid.dll
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\SendGrid.SmtpApi.dll
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\SendGridMail.dll
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\System.Net.Http.Formatting.xml
